@@ -8,11 +8,24 @@ import user from "../data/user";
 console.log(user);
 
 function App() {
+  const github = user.links.github;
+  const linkedin = user.links.linkedin;
+
   return (
     <div>
       <NavBar />
-      <Home />
-      <About />
+
+      <Home 
+      name={user.name}
+      city={user.city}
+      color={user.color}
+      />
+
+      <About 
+      bio={user.bio}
+      github={github}
+      linkedin={linkedin}
+      />
     </div>
   );
 }
